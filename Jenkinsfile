@@ -9,7 +9,6 @@ pipeline{
                echo "in s1"
                b=$GIT_BRANCH
                echo $b | cut -d "/" -f 2
-              echo "${GIT_BRANCH##*/ }"
             '''
       }
     }
