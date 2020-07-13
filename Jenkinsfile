@@ -10,7 +10,7 @@ pipeline{
          sh '''
                echo $FILE_NAME
                echo $TFJOB
-               TFJOB = $TFJOB+""+FILE_NAME
+               TFJOB = $TFJOB-$FILE_NAME
                echo $TFJOB
             '''
       }
