@@ -10,8 +10,7 @@ pipeline{
       steps{
          sh '''
                echo $TFJOB
-               TFJOB = $TFJOB-$GIT_BRANCH
-               echo it is $TFJOB
+               echo it is $TFJOB-$GIT_BRANCH
             '''
       }
     }
