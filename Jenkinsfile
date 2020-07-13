@@ -15,7 +15,7 @@ pipeline{
       steps{
          sh '''
                echo $TFJOB
-                         
+               echo $GIT_LOCAL_BRANCH               
             '''
       }
     }
