@@ -2,7 +2,7 @@ pipeline{
   agent any
   environment {
     
-    TFJOB="Iac-Terraform-$GIT_BRANCH"
+    TFJOB="Iac-Terraform-$GIT_LOCAL_BRANCH"
   }
   stages{
     stage('S1'){ 
