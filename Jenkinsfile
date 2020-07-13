@@ -8,7 +8,7 @@ pipeline{
     stage('S1'){ 
       steps{
          sh '''
-               echo hi
+               echo $TFJOB
             '''
       }
     }
