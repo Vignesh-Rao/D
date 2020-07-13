@@ -15,6 +15,7 @@ pipeline{
                  a="PRD"
                fi
                echo $a
+               echo "$AWS-$a"
                
             '''
       }
