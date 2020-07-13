@@ -15,7 +15,7 @@ pipeline{
                echo it is $TFJOB-$GIT_BRANCH
                if [ "$GIT_BRANCH" = "master" ]
                then
-                 TFJOB="Terraform-"$GIT_BRANCH
+                 TFJOB="Terraform-$GIT_BRANCH"
                fi          
             '''
       }
