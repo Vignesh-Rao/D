@@ -11,7 +11,7 @@ pipeline{
                echo $FILE_NAME
                echo $TFJOB
                TFJOB = $TFJOB-$FILE_NAME
-               echo $TFJOB
+               echo it is TFJOB
             '''
       }
     }
