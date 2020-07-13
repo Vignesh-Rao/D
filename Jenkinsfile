@@ -2,7 +2,7 @@ pipeline{
   agent any
   environment{
     TFJOB="Iac-Terraform"
-    FILE_NAME="${sh(script:'(echo $GIT_BRANCH)', returnStdout: true).trim()}"
+    FILE_NAME="${sh(script:'(echo $GIT_BRANCH | cut -d'/' -f2)', returnStdout: true).trim()}"
   }
   stages{
     stage('S1'){ 
