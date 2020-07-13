@@ -8,7 +8,7 @@ pipeline{
       steps{
          sh '''
               echo $BRANCH_NAME
-
+              echo $GIT_BRANCH
             '''
       }
     }
