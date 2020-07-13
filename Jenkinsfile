@@ -14,7 +14,7 @@ pipeline{
        }
       steps{
          sh '''
-               echo $TFJOB
+               echo "${GIT_BRANCH.split("/")[1]}"
                echo $GIT_LOCAL_BRANCH               
             '''
       }
