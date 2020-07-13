@@ -1,14 +1,14 @@
 pipeline{
   agent any
   environment {
-    MY_GIT_BRANCH="${TEMP_GIT_BRANCH#*/}"
-    TFJOB="Iac-Terraform-$GIT_LOCAL_BRANCH"
+    ]
+    TFJOB="Iac-Terraform"
   }
   stages{
     stage('S1'){ 
       steps{
          sh '''
-               TEMP_GIT_BRANCH=${GIT_BRANCH}
+               echo we need to run "TFJOB-${TEMP_GIT_BRANCH#*/}"
                
             '''
       }
