@@ -9,7 +9,7 @@ pipeline{
     stage('S1'){ 
       steps{
          sh '''
-               a="TFJOB-${TEMP_GIT_BRANCH#*/}"
+               a="${GIT_BRANCH#*/}"
                if [ "$a" = "master" ]
                then
                  a="PRD"
