@@ -7,7 +7,7 @@ pipeline{
     stage('S1'){ 
       steps{
          sh '''
-              env.GIT_BRANCH
+              echo $BRANCH_NAME
 
             '''
       }
