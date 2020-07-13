@@ -7,7 +7,7 @@ pipeline{
     stage('S1'){ 
       steps{
          sh '''
-               echo printenv
+               printenv
                echo "in s1"
             '''
       }
