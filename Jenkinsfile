@@ -1,8 +1,8 @@
 pipeline{
   agent any
   environment {
-    FILE_NAME="${sh(script:'($GIT_BRANCH)', returnStdout: true).trim()}"
-    TFJOB="Iac-Terraform"
+    
+    TFJOB="Iac-Terraform-$GIT_BRANCH"
   }
   stages{
     stage('S1'){ 
