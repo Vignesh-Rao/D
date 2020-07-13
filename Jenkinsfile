@@ -8,7 +8,7 @@ pipeline{
                printenv
                echo "in s1"
                b=$GIT_BRANCH
-               echo "${b##*/ }"
+               echo "${b#*/ }"
               echo "${GIT_BRANCH##*/ }"
             '''
       }
