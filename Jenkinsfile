@@ -7,7 +7,7 @@ pipeline{
     stage('S1'){ 
       steps{
          sh '''
-               echo 'Pulling...' + env.BRANCH_NAME
+               echo printenv
                echo "in s1"
             '''
       }
