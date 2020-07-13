@@ -8,7 +8,8 @@ pipeline{
     stage('S1'){ 
       steps{
          sh '''
-               echo $TFJOB
+               TEMP_GIT_BRANCH=${GIT_BRANCH}
+               MY_GIT_BRANCH="${TEMP_GIT_BRANCH#*/}"
             '''
       }
     }
