@@ -1,17 +1,17 @@
 pipeline{
   agent any
-  environment{
+  environment {
+    FULL_PATH_BRANCH = "${sh(script:'git name-rev --name-only HEAD', returnStdout: true)}"
+    GIT_BRANCH = FULL_PATH_BRANCH.substring(FULL_PATH_BRANCH.lastIndexOf('/') + 1, FULL_PATH_BRANCH.length())
     TFJOB="Iac-Terraform"
-    FILE_NAME="${sh(script:'(echo $GIT_BRANCH | cut -d'/' -f2)', returnStdout: true).trim()}"
   }
   stages{
     stage('S1'){ 
       steps{
          sh '''
-               echo $FILE_NAME
                echo $TFJOB
-               TFJOB = $TFJOB-$FILE_NAME
-               echo it is TFJOB
+               TFJOB = $TFJOB-$GIT_BRANCH
+               echo it is $TFJOB
             '''
       }
     }
